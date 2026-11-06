@@ -79,7 +79,7 @@ function About() {
           articles, and other editorial projects.
         </p>
 
-        <p className="label">Selected Awards:</p>
+        <p className="label">Selected Awards</p>
         <p>Tofte Lake Center Emerging Artist Fellowship, 2025</p>
         <p>Periplus Nonfiction Prize finalist</p>
 
