@@ -13,13 +13,6 @@ const sections = [
     ],
   },
   {
-    heading: "Publishers Weekly",
-    items: [
-      { title: "Mediterranean Wall", venue: "Publishers Weekly", url: "https://www.publishersweekly.com/9781943156979" },
-      { title: "Love in the Big City", venue: "Publishers Weekly", url: "https://www.publishersweekly.com/9780802158789" },
-    ],
-  },
-  {
     heading: "Interviews",
     items: [
       { title: "Art in Conversation", venue: "fields magazine (editor)", url: "https://www.fieldsmagazine.com/art-in-conversation" },
@@ -41,21 +34,18 @@ const sections = [
     ],
   },
   {
-    heading: "Fiction",
-    items: [
-      { title: "Porn addition", venue: "Psychology Today", url: "https://www.psychologytoday.com/us/blog/sex-esteem/202101/is-porn-addiction-really-a-disorder" },
-      { title: "Does more sex lead to more happiness", venue: "Psychology Today", url: "https://www.psychologytoday.com/us/blog/sex-esteem/202012/does-more-sex-lead-feeling-happier" },
-      { title: "the crown as a sex therapist", venue: "Psychology Today", url: "https://www.psychologytoday.com/us/blog/sex-esteem/202012/watching-the-crown-s-portrayal-bulimia-sex-therapist" },
-      { title: "Party at the Get Down Jones", venue: "RECLINER", url: "https://reclinermag.com/issue/2/reruns/audrey-deng-party-at-the-get-down-jones" },
-      { title: "Not My Fault!", venue: "RECLINER", url: "https://reclinermag.com/issue/3/5-oclock-news/audrey-deng-not-my-fault" },
-    ],
-  },
-  {
     heading: "Essays",
     items: [
       { title: "Betta Fish Blues", venue: "Mr. Beller’s Neighborhood", url: "https://mrbellersneighborhood.com/2020/04/betta-fish-blues" },
-      { title: "Cosmonauts Avenue", venue: "Cosmonauts Avenue" },
+      { title: "L'escargot, Let's Talk More", venue: "Cosmonauts Avenue" },
       { title: "Academy of American Poets", venue: "Judith Lobel Arkin Prize", url: "https://poets.org/academy-american-poets/judith-lobel-arkin-prize" },
+    ],
+  },
+  {
+    heading: "Fiction",
+    items: [
+      { title: "Party at the Get Down Jones", venue: "RECLINER", url: "https://reclinermag.com/issue/2/reruns/audrey-deng-party-at-the-get-down-jones" },
+      { title: "Not My Fault!", venue: "RECLINER", url: "https://reclinermag.com/issue/3/5-oclock-news/audrey-deng-not-my-fault" },
     ],
   },
 ];
@@ -78,9 +68,12 @@ function Entry({ item }) {
 }
 
 function Writing() {
-  return (
-    <section className="writing">
-      {sections.map((s) => (
+  const leftColumnSections = [sections[1], sections[2]];
+  const rightColumnSections = [sections[0], sections[3], sections[4]];
+
+  const renderColumn = (columnSections) => (
+    <div className="writing-column">
+      {columnSections.map((s) => (
         <div key={s.heading} className="writing-section">
           <h4>{s.heading}</h4>
           <ul>
@@ -90,6 +83,13 @@ function Writing() {
           </ul>
         </div>
       ))}
+    </div>
+  );
+
+  return (
+    <section className="writing">
+      {renderColumn(leftColumnSections)}
+      {renderColumn(rightColumnSections)}
     </section>
   );
 }
