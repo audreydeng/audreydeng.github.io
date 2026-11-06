@@ -4,6 +4,7 @@ import NavBar from "./components/Navbar";
 import About from "./components/About/About";
 import Writing from "./components/Writing/Writing";
 import Illustration from "./components/Illustration/Illustration";
+import Dog from "./components/Dog/Dog";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<About />} />
           <Route path="/writing" element={<Writing />} />
           <Route path="/illustration" element={<Illustration />} />
+          <Route path="/dog" element={<Dog />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>
