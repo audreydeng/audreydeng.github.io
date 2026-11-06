@@ -64,9 +64,7 @@ function About() {
         onLoad={readRatio}
       />
       <div className="about-text" ref={textRef}>
-        <p>I am a Texas-born writer and illustrator based in New York.</p>
-        <p>
-          I received my MFA in Nonfiction Writing from Columbia University.
+        <p>I am a Texas-born writer and illustrator based in New York. I received my MFA in Nonfiction Writing from Columbia University.
         </p>
         <p>
           My writing and drawings have appeared in <em>Columbia Journal</em>,{" "}
