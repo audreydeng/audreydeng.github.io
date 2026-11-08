@@ -38,7 +38,12 @@ const sections = [
     items: [
       { title: "Betta Fish Blues", venue: "Mr. Beller’s Neighborhood", url: "https://mrbellersneighborhood.com/2020/04/betta-fish-blues" },
       { title: "L'escargot, Let's Talk More", venue: "Cosmonauts Avenue" },
-      { title: "Academy of American Poets", venue: "Judith Lobel Arkin Prize", url: "https://poets.org/academy-american-poets/judith-lobel-arkin-prize" },
+    ],
+  },
+  {
+    heading: "Poetry",
+    items: [
+      { title: "Ode to the Sea Cucumber", venue: "Academy of American Poets", url: "https://poets.org/academy-american-poets/judith-lobel-arkin-prize" },
     ],
   },
   {
@@ -69,7 +74,7 @@ function Entry({ item }) {
 
 function Writing() {
   const leftColumnSections = [sections[1], sections[2]];
-  const rightColumnSections = [sections[0], sections[3], sections[4]];
+  const rightColumnSections = [sections[0], sections[3], sections[4], sections[5]];
 
   const renderColumn = (columnSections) => (
     <div className="writing-column">

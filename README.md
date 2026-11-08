@@ -39,7 +39,7 @@ An SSH key lets GitHub confirm your computer's identity when you clone or push c
 
 ### Clone the website repository
 
-In Terminal, go to the folder where you keep projects (for example, `cd ~/Documents`) and run:
+In Terminal, go to the folder where you keep projects (for example, `cd ~/Documents`) and run: :)
 
 ```bash
 git clone git@github.com:audreydeng/audreydeng.github.io.git
