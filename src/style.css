@@ -96,6 +96,9 @@ h4 {
 .about-text p { margin: 0 0 1.1em; }
 .about-text a { text-underline-offset: 3px; }
 .about-text .label { font-weight: bold; margin-bottom: 0.4em; }
+.about-text .label::after,
+.illustration .label::after,
+.label::after { content: none; }
 .contact-block { margin-top: 2.2em; }
 .button-link {
   display: inline-block;
